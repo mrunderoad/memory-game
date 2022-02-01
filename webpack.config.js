@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -10,15 +11,18 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: './dist'
+    static: {
+      directory: path.join(__dirname, 'dist')
+    }
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Shape Tracker',
+      title: 'TITLE HERE',
       template: './src/index.html',
       inject: 'body'
-    })
+    }),
+    new ESLintPlugin(),
   ],
   module: {
     rules: [
@@ -30,9 +34,24 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
+        test: /\.(jpe?g|png|gif)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/img/[hash][ext]'
+        }
+      },
+      {
+        test: /\.(ogg|mp3|wav|mpe?g)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/audio/[hash][ext]'
+        }
+      },
+      {
+        test:/\.html$/,
+        use: [
+          'html-loader'
+        ]
       }
     ]
   }

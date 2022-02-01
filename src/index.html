@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Memory Game</title>
+</head>
+<body>
+  <div class="container">
+    <div class="home-page">
+        <div class="jumbotron">
+          <h1 class="welcome">Welcome to the memory masher!</h1>
+        </div>
+      <p><strong>MASH THAT MEMORY!</strong></p>
+      <button class="btn-dark" id="play">Play Now</button>
+      <div class="rules">
+        <h3>Rules:</h3>
+        <div class="card" id="card1">
+        <p>Memory has long been a favorite game for all generations. It is easy to play, in fact it is so simple that really young children can play with ease.
+
+          It requires observation, concentration and a good memory to win.
+          
+          Although the game is designed so two players play against each other it can also be played by a single player.
+          
+          The game is also known as Concentration, Pelmanism, Shinkei-suijaku, Pexeso and Pairs.</p>
+        </div>
+        <div class="card" id="card2">
+          <p>The first player chooses a card and carefully turns it over. Be sure not to bother the surrounding cards.
+
+            The player then selects another card and turns it over. If the two cards are a matching pair for example two Jacks then they take the two cards and start a stack. The player is awarded another turn for making a match and goes again.
+            
+            If the cards are not a match they are turned back over and it is now the next players turn.
+            
+            The next player chooses their first card and turns it over. If it is a match for one of the cards the previous player turned over then they try to remember where that matching card was and turn it. If they are successful at making a match they place the cards in their stack and choose another card.
+            
+            If the first card turned over was not a match for one previously turned over the player selects another card in an attempt of making a pair.
+            
+            If they are unsuccessful in making a match they flip the cards back over and play is passed to the next player.</p>
+        </div>
+        <div class="card" id="card3">
+          <p>A players turn is not over until they are unable to make a matching pair.
+
+              The game continues in this fashion until all the cards are played.</p>
+          </div>
+        
+      </div>
+    </div>
+    <div class="game-page">
+      <section class="memory">
+        <div class="memory-card" data-value="pikachu">
+          <img class="front-face" src="./assets/img/pika.jpg" alt="Pikachu">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="pikachu">
+          <img class="front-face" src="./assets/img/pika.jpg" alt="Pikachu">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="junji">
+          <img class="front-face" src="./assets/img/ito.jpg" alt="Junji">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="junji">
+          <img class="front-face" src="./assets/img/ito.jpg" alt="Junji">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="grandma">
+          <img class="front-face" src="./assets/img/granny.png" alt="Grandma">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="grandma">
+          <img class="front-face" src="./assets/img/granny.png" alt="Grandma">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="davito">
+          <img class="front-face" src="./assets/img/danny.png" alt="Davito">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="davito">
+          <img class="front-face" src="./assets/img/danny.png" alt="Davito">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="shrek">
+          <img class="front-face" src="./assets/img/shrek.png" alt="Shrek">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="shrek">
+          <img class="front-face" src="./assets/img/shrek.png" alt="Shrek">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="kitty">
+          <img class="front-face" src="./assets/img/kitty.jpg" alt="Hello Kitty">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+        <div class="memory-card" data-value="kitty">
+          <img class="front-face" src="./assets/img/kitty.jpg" alt="Hello Kitty">
+          <img class="back-face" src="./assets/img/bean.jpg" alt="Bean">
+        </div>
+      </section>
+      <form id="home">
+        <button class="btn-dark">Home</button>
+      </form>
+    </div>
+  </div> 
+</body>
+</html>
