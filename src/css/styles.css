@@ -108,3 +108,13 @@ body {
   text-align: center;
   padding: 1.5em;
 }
+
+.moveMe {
+  position: absolute;
+  margin-right: 15vw;
+  margin-top: -30vh;
+}
+
+.moveMeUp {
+  margin-top: -30vh;
+}
