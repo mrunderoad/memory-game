@@ -93,7 +93,7 @@ function startTimer(duration, display) {
       $(".game-page").hide();
       $(".home-page").show();
     }
-  }, 1000);
+  }, 1200);
 }
 
 $("#play").click(function() {
